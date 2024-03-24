@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS styles */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .bg-custom {
+            background-color: #E2E8F0; /* Light blue color */
+        }
+        .btn-learn-more {
+            background-color: #3490dc; /* Blue color */
+        }
+    </style>
+</head>
+<body class="bg-custom">
+    <!-- Header -->
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto text-white text-center">
+            <h1 class="text-3xl font-bold">Data Visualization Platform</h1>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="container mt-5 mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Chart -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-white">Accident Deaths Visualization</h2>
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+            <!-- Sidebar -->
+            <div>
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-2 text-white">State-wise Breakup</h4>
+                    <!-- Add cards for state-wise breakup here -->
+                    <div class="bg-white p-4 rounded shadow">
+                        <h5 class="font-bold">Tamilnadu</h5>
+                        <p>Number of deaths: 1000</p>
+                    </div>
+                    <div class="bg-white p-4 mt-4 rounded shadow">
+                        <h5 class="font-bold">Kerala</h5>
+                        <p>Number of deaths: 2000</p>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-2 text-white">Preventive Measures</h4>
+                    <!-- Add cards for preventive measures here -->
+                    <div class="bg-white p-4 rounded shadow">
+                        <h5 class="font-bold">Obey Traffic Rules</h5>
+                        <p class="description">Always obey traffic rules to avoid accidents. Learn more <a href="https://www.morth.nic.in/road-transport">here</a>.</p>
+                        <a href="https://www.morth.nic.in/road-transport" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                    <div class="bg-white p-4 mt-4 rounded shadow">
+                        <h5 class="font-bold">Wear Seat Belts</h5>
+                        <p class="description">Always wear seat belts while driving or traveling in a vehicle. Learn more <a href="https://www.who.int/violence_injury_prevention/road_traffic/road_safety_status/2018/en/">here</a>.</p>
+                        <a href="https://www.who.int/violence_injury_prevention/road_traffic/road_safety_status/2018/en/" class="btn btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2 text-white">YouTube Videos</h4>
+                    <!-- Add YouTube video links here -->
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/video1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto text-white text-center">
+            <p>&copy; 2022 Data Visualization Platform</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
